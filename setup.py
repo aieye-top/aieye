@@ -2,12 +2,14 @@
 # -*- coding: utf-8 -*-
 
 import os
-from setuptools import setup, find_packages
+from setuptools import setup
+
 
 def get_version() -> str:
     # https://packaging.python.org/guides/single-sourcing-package-version/
     init = open(os.path.join("aieye", "__init__.py"), "r").read().split()
     return init[init.index("__version__") + 2][1:-1]
+
 
 setup(
     name="aieye",
