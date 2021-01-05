@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 
 import os
-from setuptools import setup
+from setuptools import setup, find_packages
 
 
 def get_version() -> str:
@@ -23,6 +23,9 @@ setup(
         "Programming Language :: Python :: 3.7",
         "Programming Language :: Python :: 3.8",
     ],
+    packages=find_packages(
+        exclude=["examples", "examples.*"]
+    ),
     install_requires=[
         "torch>=1.6.0"
     ],
