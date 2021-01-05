@@ -54,5 +54,8 @@ jobs:
       - name: Documentation test
         run: |
           cd docs
+          rm -rf _build
+          d2lbook build eval
           d2lbook build html
+          d2lbook clear
           cd ..
