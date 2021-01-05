@@ -33,7 +33,8 @@ setup(
         "dev": [
             "flake8",
             "mypy",
-            "d2lbook"
+            "d2lbook",
+            "sphinxcontrib-bibtex==1.0.0",
         ],
     },
 )
