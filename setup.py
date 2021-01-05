@@ -1,0 +1,24 @@
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+import os
+from setuptools import setup, find_packages
+
+def get_version() -> str:
+    # https://packaging.python.org/guides/single-sourcing-package-version/
+    init = open(os.path.join("aieye", "__init__.py"), "r").read().split()
+    return init[init.index("__version__") + 2][1:-1]
+
+setup(
+    name="aieye",
+    version=get_version(),
+    description="A Library for ** Learning",
+    author="StevenJokess",
+    author_email="llgg8679@qq.com",
+    python_requires=">=3.6",
+    classifiers=[
+        "Programming Language :: Python :: 3.6",
+        "Programming Language :: Python :: 3.7",
+        "Programming Language :: Python :: 3.8",
+    ],
+)
