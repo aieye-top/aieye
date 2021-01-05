@@ -12,7 +12,7 @@ def get_version() -> str:
 setup(
     name="aieye",
     version=get_version(),
-    description="A Library for ** Learning",
+    description="A Library for cheap deep Learning",
     author="StevenJokess",
     author_email="llgg8679@qq.com",
     python_requires=">=3.6",
@@ -21,4 +21,12 @@ setup(
         "Programming Language :: Python :: 3.7",
         "Programming Language :: Python :: 3.8",
     ],
+    install_requires=[
+        "torch>=1.6.0"
+    ],
+    extras_require={
+        "dev": [
+            "flake8",
+        ],
+    },
 )
