@@ -49,3 +49,10 @@ jobs:
       #- name: Type check
       #  run: |
       #    mypy
+
+
+      - name: Documentation test
+        run: |
+          cd docs
+          d2lbook build html
+          cd ..
