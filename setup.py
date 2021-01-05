@@ -33,6 +33,7 @@ setup(
         "dev": [
             "flake8",
             "mypy",
+            "d2lbook"
         ],
     },
 )
